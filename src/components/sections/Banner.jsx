@@ -1,9 +1,11 @@
 import "../../index.css";
 import Button from "../Button";
 import Animate from "../ui/Animate";
-import { useEffect, useRef } from "react";
+import ShinyText from "../ui/ShinyText";
+import { useEffect, useRef, useState } from "react";
 
 export default function Banner() {
+  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const blob1Ref = useRef(null);
   const blob2Ref = useRef(null);
   const blob3Ref = useRef(null);
@@ -51,6 +53,23 @@ export default function Banner() {
           threshold={0.2}
           delay={0.3}
         >
+          <div className="mb-8 flex items-center justify-center align-middle text-center">
+            <div
+              className="relative"
+              onMouseEnter={() => setIsTooltipVisible(true)}
+              onMouseLeave={() => setIsTooltipVisible(false)}
+              onClick={() => setIsTooltipVisible(!isTooltipVisible)}
+            >
+              <div className="text-center bg-dark-gray px-4 py-1 rounded-full cursor-pointer">
+                <ShinyText text="Beta" disabled={false} speed={3} />
+              </div>
+              {isTooltipVisible && (
+                <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-dark-gray text-white text-xs rounded-md whitespace-nowrap z-10">
+                  Website is under development
+                </div>
+              )}
+            </div>
+          </div>
           <h1 className="text-5xl xl:text-6xl 2xl:text-7xl font-semibold">
             Providing The <span className="bg-gray px-4 rounded-xl">Best</span>{" "}
             Products.
