@@ -12,6 +12,7 @@ export default function Footer() {
         <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
         <a href="#about">About</a>
+        <a href="/books">Books</a>
       </div>
       <div className="mt-4 text-center">
         <p>

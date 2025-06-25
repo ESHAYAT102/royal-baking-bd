@@ -88,6 +88,7 @@ export default function Navbar() {
             <a href="#gallery">Gallery</a>
             <a href="#reviews">Reviews</a>
             <a href="#about">About</a>
+            <a href="/blog">Blog</a>
           </div>
 
           <div className="hidden lg:block">
@@ -125,6 +126,11 @@ export default function Navbar() {
             <div>
               <a href="#about" className="py-2">
                 About
+              </a>
+            </div>
+            <div>
+              <a href="/blog" className="py-2">
+                Blog
               </a>
             </div>
           </div>
