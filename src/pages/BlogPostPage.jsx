@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import matter from "gray-matter";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import Animate from "../components/ui/Animate";
 
 const MarkdownComponents = {
   code({ node, inline, className, children, ...props }) {
@@ -173,14 +174,16 @@ export default function BlogPostPage() {
         </h1>
         <p className="mt-4 text-lg text-gray-500">{post.data.date}</p>
       </div>
-      <article className="prose lg:prose-xl mx-auto">
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          components={MarkdownComponents}
-        >
-          {post.content}
-        </ReactMarkdown>
-      </article>
+      <Animate distance={100} direction="vertical" duration={1} initialOpacity={0} delay={0.2}>
+        <article className="prose lg:prose-xl mx-auto">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={MarkdownComponents}
+          >
+            {post.content}
+          </ReactMarkdown>
+        </article>
+      </Animate>
     </div>
   );
 }
