@@ -1,11 +1,14 @@
 import Button from "./Button";
 import Animate from "./ui/Animate";
 import { useState, useRef, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef();
   const buttonRef = useRef();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handler = (e) => {
@@ -26,6 +29,27 @@ export default function Navbar() {
       document.removeEventListener("mousedown", handler);
     };
   }, [isMenuOpen]);
+
+  // Helper to scroll to section by id
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  // Handles nav link clicks
+  function handleNavClick(e, id) {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/", { replace: false });
+      // Wait for navigation, then scroll
+      setTimeout(() => scrollToSection(id), 100);
+    } else {
+      scrollToSection(id);
+    }
+    setIsMenuOpen(false);
+  }
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full">
@@ -83,16 +107,16 @@ export default function Navbar() {
           </button>
 
           <div className="hidden lg:flex gap-4">
-            <a href="#">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#about">About</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); navigate("/"); setIsMenuOpen(false); }}>Home</a>
+            <a href="#menu" onClick={(e) => handleNavClick(e, "menu")}>Menu</a>
+            <a href="#gallery" onClick={(e) => handleNavClick(e, "gallery")}>Gallery</a>
+            <a href="#reviews" onClick={(e) => handleNavClick(e, "reviews")}>Reviews</a>
+            <a href="#about" onClick={(e) => handleNavClick(e, "about")}>About</a>
             <a href="/blog">Blog</a>
           </div>
 
           <div className="hidden lg:block">
-            <Button link="#contact">Contact</Button>
+            <Button link="#contact" onClick={(e) => handleNavClick(e, "contact")}>Contact</Button>
           </div>
         </div>
 
@@ -104,34 +128,27 @@ export default function Navbar() {
         >
           <div className="flex flex-col justify-end gap-4 text-right w-full">
             <div>
-              <a href="#" className="py-2">
+              <a href="#" className="py-2" onClick={(e) => { e.preventDefault(); navigate("/"); setIsMenuOpen(false); }}>
                 Home
               </a>
             </div>
             <div>
-              <a href="#menu" className="py-2">
-                Menu
-              </a>
+              <a href="#menu" className="py-2" onClick={(e) => handleNavClick(e, "menu")}>Menu</a>
             </div>
             <div>
-              <a href="#gallery" className="py-2">
-                Gallery
-              </a>
+              <a href="#gallery" className="py-2" onClick={(e) => handleNavClick(e, "gallery")}>Gallery</a>
             </div>
             <div>
-              <a href="#reviews" className="py-2">
-                Reviews
-              </a>
+              <a href="#reviews" className="py-2" onClick={(e) => handleNavClick(e, "reviews")}>Reviews</a>
             </div>
             <div>
-              <a href="#about" className="py-2">
-                About
-              </a>
+              <a href="#about" className="py-2" onClick={(e) => handleNavClick(e, "about")}>About</a>
             </div>
             <div>
-              <a href="/blog" className="py-2">
-                Blog
-              </a>
+              <a href="/blog" className="py-2">Blog</a>
+            </div>
+            <div>
+              <a href="#contact" className="py-2" onClick={(e) => handleNavClick(e, "contact")}>Contact</a>
             </div>
           </div>
         </div>
