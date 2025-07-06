@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import BlogListPage from "./pages/BlogListPage.jsx";
 import BlogPostPage from "./pages/BlogPostPage.jsx";
+import Menu from "./pages/Menu.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 window.Buffer = Buffer;
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "blog", Component: BlogListPage },
       { path: "blog/:slug", Component: BlogPostPage },
+      { path: "menu", Component: Menu },
     ],
   },
   {

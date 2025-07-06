@@ -14,7 +14,7 @@ export default function Menu() {
             <div className="col-span-1">
               <img
                 className="rounded-2xl h-full w-full object-cover"
-                src="menu/menu.png"
+                src="menu/menu1.png"
                 alt="Menu Image"
               />
             </div>
@@ -23,7 +23,7 @@ export default function Menu() {
             <div className="col-span-1">
               <img
                 className="rounded-2xl h-full w-full object-cover"
-                src="menu/menu.png"
+                src="menu/menu6.png"
                 alt="Menu Image"
               />
             </div>
@@ -31,9 +31,7 @@ export default function Menu() {
         </div>
         <FadeInOnScroll direction="up" delay={0.8}>
           <div className="mt-12 w-full">
-            <ButtonFull link="https://www.facebook.com/banasree2021">
-              See All
-            </ButtonFull>
+            <ButtonFull link="/menu">See All</ButtonFull>
           </div>
         </FadeInOnScroll>
       </Container>
