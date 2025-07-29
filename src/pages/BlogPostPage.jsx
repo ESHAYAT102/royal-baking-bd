@@ -111,7 +111,10 @@ const MarkdownComponents = {
     </th>
   ),
   td: ({ children, ...props }) => (
-    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500" {...props}>
+    <td
+      className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+      {...props}
+    >
       {children}
     </td>
   ),
@@ -174,7 +177,13 @@ export default function BlogPostPage() {
         </h1>
         <p className="mt-4 text-lg text-gray-500">{post.data.date}</p>
       </div>
-      <Animate distance={100} direction="vertical" duration={1} initialOpacity={0} delay={0.2}>
+      <Animate
+        distance={100}
+        direction="vertical"
+        duration={1}
+        initialOpacity={0}
+        delay={0.2}
+      >
         <article className="prose lg:prose-xl mx-auto">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
