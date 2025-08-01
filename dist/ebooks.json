@@ -1,0 +1,28 @@
+{
+  "ebooks": [
+    {
+      "id": "123457",
+      "name": "Mastering French Pastries",
+      "description": "A comprehensive guide to creating authentic French pastries. From croissants to éclairs, learn the techniques and secrets of French pastry making.",
+      "url": "https://docs.google.com/document/d/1234567890/edit",
+      "price": 299,
+      "topics": ["Croissants", "Éclairs", "Choux Pastry", "French Techniques"]
+    },
+    {
+      "id": "789013",
+      "name": "The Art of Bread Making",
+      "description": "Discover the science and art behind perfect bread making. Learn about different types of flour, fermentation, and techniques for creating artisanal breads.",
+      "url": "https://docs.google.com/document/d/0987654321/edit",
+      "price": 399,
+      "topics": ["Sourdough", "Artisan Bread", "Fermentation", "Bread Science"]
+    },
+    {
+      "id": "345679",
+      "name": "Modern Cake Decorating",
+      "description": "Master modern cake decorating techniques. From fondant work to buttercream flowers, this guide covers everything you need to create stunning cakes.",
+      "url": "https://docs.google.com/document/d/5678901234/edit",
+      "price": 499,
+      "topics": ["Fondant", "Buttercream", "Sugar Flowers", "Wedding Cakes"]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "courses": [
+    {
+      "id": "123456",
+      "name": "Classic Tiramisu",
+      "video": "https://www.youtube.com/embed/8rVS4rP_6_Q",
+      "intro": "https://www.youtube.com/embed/bS8DI3k1q78",
+      "pdf": "https://docs.google.com/document/d/1234567890/edit",
+      "price": 1199,
+      "description": "Learn how to make the perfect Italian Tiramisu with layers of coffee-soaked ladyfingers and creamy mascarpone filling. This classic dessert is perfect for any occasion!",
+      "ingredients": [
+        {
+          "id": "0",
+          "name": "Mascarpone Cheese",
+          "amount": "500g"
+        },
+        {
+          "id": "1",
+          "name": "Ladyfingers",
+          "amount": "24 pieces"
+        },
+        {
+          "id": "2",
+          "name": "Strong Coffee",
+          "amount": "2 cups"
+        }
+      ]
+    },
+    {
+      "id": "789012",
+      "name": "French Macarons",
+      "video": "https://www.youtube.com/embed/9Fs1m4l_qR8",
+      "intro": "https://www.youtube.com/embed/MjVgIXccYXA",
+      "pdf": "https://docs.google.com/document/d/0987654321/edit",
+      "price": 1099,
+      "description": "Master the art of making perfect French macarons with this detailed course. Learn the secret techniques to achieve smooth shells and perfect feet every time.",
+      "ingredients": [
+        {
+          "id": "0",
+          "name": "Almond Flour",
+          "amount": "100g"
+        },
+        {
+          "id": "1",
+          "name": "Powdered Sugar",
+          "amount": "100g"
+        },
+        {
+          "id": "2",
+          "name": "Egg Whites",
+          "amount": "70g"
+        }
+      ]
+    },
+    {
+      "id": "345678",
+      "name": "Victorian Sponge Cake",
+      "video": "https://www.youtube.com/embed/5xyz12345",
+      "intro": "https://www.youtube.com/embed/K8gxhPR6Ya8",
+      "pdf": "https://docs.google.com/document/d/5678901234/edit",
+      "price": 999,
+      "description": "Create the perfect afternoon tea treat with this classic Victorian sponge cake recipe. Learn the techniques for a light, fluffy sponge filled with jam and cream.",
+      "ingredients": [
+        {
+          "id": "0",
+          "name": "Self-raising Flour",
+          "amount": "200g"
+        },
+        {
+          "id": "1",
+          "name": "Caster Sugar",
+          "amount": "200g"
+        },
+        {
+          "id": "2",
+          "name": "Butter",
+          "amount": "200g"
+        }
+      ]
+    }
+  ]
+}
