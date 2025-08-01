@@ -141,7 +141,7 @@ export default function Navbar() {
             <a href="/blog">Blog</a>
           </div>
 
-          <div className="hidden lg:flex items-center">
+          <div className="flex items-center">
             <SignedOut>
               <Button>
                 <SignInButton />
