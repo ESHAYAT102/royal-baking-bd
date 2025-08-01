@@ -143,7 +143,7 @@ export default function Navbar() {
             </a>
           </div>
 
-          <div className="hidden lg:flex items-center">
+          <div className="flex items-center">
             <SignedOut>
               <Button>
                 <SignInButton />
