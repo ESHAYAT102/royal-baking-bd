@@ -114,7 +114,7 @@ export default function Navbar() {
 
           <div className="hidden lg:flex gap-4">
             <a
-              href="#"
+              href="/"
               onClick={(e) => {
                 e.preventDefault();
                 navigate("/");
@@ -132,13 +132,15 @@ export default function Navbar() {
             <a href="#reviews" onClick={(e) => handleNavClick(e, "reviews")}>
               Reviews
             </a>
+            <a href="/courses">Courses</a>
+            <a href="/ebooks">Ebooks</a>
+            <a href="/blog">Blog</a>
             <a href="#about" onClick={(e) => handleNavClick(e, "about")}>
               About
             </a>
-            <a href="#contact" onClick={(e) => handleNavClick(e, "about")}>
+            <a href="#contact" onClick={(e) => handleNavClick(e, "contact")}>
               Contact
             </a>
-            <a href="/blog">Blog</a>
           </div>
 
           <div className="hidden lg:flex items-center">
@@ -162,7 +164,7 @@ export default function Navbar() {
           <div className="flex flex-col justify-end gap-4 text-right w-full">
             <div>
               <a
-                href="#"
+                href="/"
                 className="py-2"
                 onClick={(e) => {
                   e.preventDefault();
@@ -201,17 +203,27 @@ export default function Navbar() {
               </a>
             </div>
             <div>
+              <a href="/courses" className="py-2">
+                Courses
+              </a>
+            </div>
+            <div>
+              <a href="/ebooks" className="py-2">
+                Ebooks
+              </a>
+            </div>
+            <div>
+              <a href="/blog" className="py-2">
+                Blog
+              </a>
+            </div>
+            <div>
               <a
                 href="#about"
                 className="py-2"
                 onClick={(e) => handleNavClick(e, "about")}
               >
                 About
-              </a>
-            </div>
-            <div>
-              <a href="/blog" className="py-2">
-                Blog
               </a>
             </div>
             <div>
